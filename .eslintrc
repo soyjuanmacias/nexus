@@ -3,7 +3,8 @@
     "browser": true,
     "jest": true
   },
-  "extends": ["idiomatic", "plugin:react/recommended", "prettier"],
+  "extends": ["airbnb", "prettier"],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module"
@@ -13,5 +14,10 @@
     "react": {
       "version": "16.7"
     }
+  },
+  "rules": {
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "react/jsx-filename-extension": "off"
   }
 }
