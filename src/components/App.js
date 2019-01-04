@@ -2,17 +2,21 @@ import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import { Route } from 'react-router-dom';
 
-import Layout from './Layout';
 import Router from './Router';
 import Theme from './Theme';
+
+import AddressBook from '../containers/AddressBook';
+
+const Detail = () => {};
+const Empty = () => {};
 
 const App = () => (
   <Router>
     <Theme>
-      <Layout>
-        <Route path="/" />
-        <Route path="/:id" />
-      </Layout>
+      <AddressBook>
+        <Route path="/:id" component={Detail} />
+        <Route component={Empty} />
+      </AddressBook>
     </Theme>
   </Router>
 );

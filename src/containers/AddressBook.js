@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 
+import Contacts from '../services/contacts';
+
 import List from './List';
 
 class AddressBook extends Layout {
@@ -12,14 +14,22 @@ class AddressBook extends Layout {
     className: PropTypes.string,
   };
 
+  state = { contacts: [] };
+
+  async componentDidMount() {
+    this.setState({ contacts: await Contacts.read() });
+  }
+
   render() {
-    const element = super.render();
     const { className } = this.props;
+    const { contacts } = this.state;
+
+    const element = super.render();
 
     return (
       element && (
         <main className={className}>
-          <List />
+          <List items={contacts} />
           {element}
         </main>
       )

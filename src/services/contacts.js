@@ -19,7 +19,9 @@ const service = {
   },
 
   async fetch() {
-    const { results } = await axios.get('/api', {
+    const {
+      data: { results },
+    } = await axios.get('/api', {
       baseURL: 'https://randomuser.me',
       params: { results: 57 },
     });
@@ -40,11 +42,13 @@ const service = {
       await this.fetch();
     }
 
+    const temporary = Object.values(this.memory);
+
     if (id) {
-      return this.memory.find(item => id === item.id);
+      return temporary.find(item => id === item.id);
     }
 
-    return this.memory;
+    return temporary;
   },
 
   update(id, data) {
