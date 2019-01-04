@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Layout from '../components/Layout';
+import Layout from './Layout';
+import List from './List';
 
 import Contacts from '../services/contacts';
-
-import List from './List';
 
 class AddressBook extends Layout {
   static propTypes = {

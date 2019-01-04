@@ -2,10 +2,9 @@ import React from 'react';
 import { hot } from 'react-hot-loader/root';
 import { Route } from 'react-router-dom';
 
+import AddressBook from './AddressBook';
 import Router from './Router';
 import Theme from './Theme';
-
-import AddressBook from '../containers/AddressBook';
 
 const Detail = () => {};
 const Empty = () => {};
