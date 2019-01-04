@@ -48,7 +48,7 @@
   "private": true,
   "repository": "joinedapp/challenge",
   "scripts": {
-    "format": "prettier --write \"**/*.(js|json|md|yml)\"",
+    "format": "prettier --write \"**/*.+(js|json|md|yml)\"",
     "lint": "eslint \"src/**/*.js\" --fix || echo 'Check your code!'",
     "start": "webpack-dev-server",
     "test": "jest --silent"

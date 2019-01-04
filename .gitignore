@@ -1,15 +1,5 @@
 # Build
-/build/assets/flags/
-/build/scripts/
 /dist
-/sourcemap
-
-# Test
-/coverage
 
 # Node
 /node_modules/
-npm-debug.log
-
-# OS (Should be on your config! ¬¬)
-.DS_Store
