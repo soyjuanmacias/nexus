@@ -29,6 +29,10 @@ const service = {
     this.memory = results.reduce((acc, item) => {
       const id = `${item.id.name}${item.id.value}`;
 
+      if (id === 'null') {
+        return acc;
+      }
+
       return { ...acc, [id]: { ...item, id } };
     }, {});
 

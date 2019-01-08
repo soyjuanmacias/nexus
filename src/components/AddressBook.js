@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Layout from './Layout';
-import List from './List';
+import ContactList from './ContactList';
 
 import Contacts from '../services/contacts';
 
@@ -25,13 +25,15 @@ class AddressBook extends Layout {
 
     const element = super.render();
 
+    if (!element) {
+      return null;
+    }
+
     return (
-      element && (
-        <main className={className}>
-          <List items={contacts} />
-          {element}
-        </main>
-      )
+      <main className={className}>
+        <ContactList items={contacts} />
+        {element}
+      </main>
     );
   }
 }

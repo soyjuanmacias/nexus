@@ -7,7 +7,7 @@ import Router from './Router';
 import Theme from './Theme';
 
 const Detail = () => {};
-const Empty = () => {};
+const Empty = () => 'hello';
 
 const App = () => (
   <Router>

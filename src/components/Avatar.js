@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const Image = styled('img')``;
 
-export const Avatar = ({ image, name }) => (
-  <figure>
+export const Avatar = ({ className, image, name }) => (
+  <figure className={className}>
     <Image
       src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
       alt={name}
@@ -14,7 +14,12 @@ export const Avatar = ({ image, name }) => (
   </figure>
 );
 
+Avatar.defaultProps = {
+  className: '',
+};
+
 Avatar.propTypes = {
+  className: PropTypes.string,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };

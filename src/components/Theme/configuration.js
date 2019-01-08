@@ -59,24 +59,12 @@ export default {
   `,
 
   /* Opacity */
-  '--font-opacity-10': css`
-    color: ${rgba('#000f19', 0.1)}; // dark-night
-  `,
-  '--font-opacity-20': css`
-    color: ${rgba('#000f19', 0.2)}; // dark-night
-  `,
-  '--font-opacity-40': css`
-    color: ${rgba('#000f19', 0.4)}; // dark-night
-  `,
-  '--font-opacity-60': css`
-    color: ${rgba('#000f19', 0.6)}; // dark-night
-  `,
-  '--font-opacity-80': css`
-    color: ${rgba('#000f19', 0.8)}; // dark-night
-  `,
-  '--font-opacity-100': css`
-    color: #000f19; // dark-night
-  `,
+  '--font-opacity-10': rgba('#000f19', 0.1),
+  '--font-opacity-20': rgba('#000f19', 0.2),
+  '--font-opacity-40': rgba('#000f19', 0.4),
+  '--font-opacity-60': rgba('#000f19', 0.6),
+  '--font-opacity-80': rgba('#000f19', 0.8),
+  '--font-opacity-100': '#000f19',
 
   /* Weight */
   '--font-weight-book': 400,

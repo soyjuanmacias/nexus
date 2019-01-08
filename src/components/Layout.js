@@ -1,5 +1,5 @@
 import React from 'react';
-import { matchPath, Route, Switch } from 'react-router-dom';
+import { matchPath, Switch } from 'react-router-dom';
 
 export class Layout extends Switch {
   static propTypes = Switch.propTypes;
@@ -9,7 +9,7 @@ export class Layout extends Switch {
 
     return React.Children.toArray(children).reduce((result, element) => {
       if (!result && React.isValidElement(element)) {
-        if (element.type === Route) {
+        if (element.type.name === 'Route') {
           const {
             path: pathProp,
             exact,
