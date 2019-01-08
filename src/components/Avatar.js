@@ -9,7 +9,7 @@ export const Avatar = ({ className, image, name }) => (
     <Image
       src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
       alt={name}
-      style={{ backgroundImage: image }}
+      style={{ backgroundImage: `url('${image}')` }}
     />
   </figure>
 );
