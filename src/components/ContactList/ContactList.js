@@ -22,4 +22,8 @@ ContactList.propTypes = {
 export default styled(ContactList)`
   margin-top: 1.2rem;
   list-style: none;
+
+  @media (${props => props.theme['--screen-medium']}) {
+    width: 32rem;
+  }
 `;

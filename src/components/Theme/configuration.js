@@ -5,19 +5,19 @@ export default {
   /** Breakpoints */
   /* By content */
   '--column-4': '',
-  '--column-8': 'screen and (min-width: 480px)',
-  '--column-12': 'screen and (min-width: 840px)',
+  '--column-8': 'min-width: 480px',
+  '--column-12': 'min-width: 840px',
 
   /* By level */
   '--level-1': '',
-  '--level-2': 'screen and (min-width: 600px)',
-  '--level-3': 'screen and (min-width: 1600px)',
+  '--level-2': 'min-width: 600px',
+  '--level-3': 'min-width: 1600px',
 
   /* By size */
-  '--screen-small': 'screen and (min-width: 600px)',
-  '--screen-medium': 'screen and (min-width: 960px)',
-  '--screen-large': 'screen and (min-width: 1280px)',
-  '--screen-xlarge': 'screen and (min-width: 1920px)',
+  '--screen-small': 'min-width: 600px',
+  '--screen-medium': 'min-width: 960px',
+  '--screen-large': 'min-width: 1280px',
+  '--screen-xlarge': 'min-width: 1920px',
 
   /** Colors */
   /* Primary palette */
@@ -38,9 +38,9 @@ export default {
 
   /** Fonts */
   '--font-extra-large': css`
-    font-size: 4.4rem;
+    font-size: 2.4rem;
     letter-spacing: 0;
-    line-height: 4.8rem;
+    line-height: 2.8rem;
   `,
   '--font-large': css`
     font-size: 1.6rem;

@@ -36,6 +36,7 @@ export default styled(StatusBar)`
 
   ${Icon} {
     color: ${props => props.theme['--color-light']};
+    margin-right: 0.4rem;
     vertical-align: bottom;
 
     &:last-of-type {
