@@ -83,7 +83,7 @@ The information provided in each contact is (example):
   },
   "dob": { "date": "1947-12-21T05:30:51Z", "age": 71 },
   "registered": { "date": "2014-10-12T18:41:35Z", "age": 4 },
-  "phone": "01-43-49-72-52",``
+  "phone": "01-43-49-72-52",
   "cell": "06-91-33-00-29",
   "id": "INSEE1NNaN0662230045",
   "picture": {
