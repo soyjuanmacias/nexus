@@ -127,3 +127,8 @@ under `/services/contacts.js`.
 
 Finally, we need to create a new screen to add a new contact. Feel free to do
 whatever you want.
+
+### Refactor
+
+If you think any can be improved, please change it. We really like the
+philosohpy of boy scouts: "Leave things better than you found".
