@@ -38,7 +38,12 @@ the project. Here we have some highlights of the structure of the project.
 
 ## Run
 
-First at all, you need to install all the packages `npm install`. If you want to
+First at all, clone the repo using the button at the top. Or if you prefer, you
+can fork the project.
+
+<img width="318" alt="screen shot 2019-01-09 at 5 49 43 pm" src="https://user-images.githubusercontent.com/1523379/50914522-028c0b80-1437-11e9-82fc-5689f5f11039.png">
+
+Then, you need to install all the packages `npm install`. If you want to
 start, you can run the application with `npm start`. You can pass the tests by
 typing `npm test`.
 
