@@ -19,4 +19,6 @@ ContactList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any),
 };
 
-export default styled(ContactList)``;
+export default styled(ContactList)`
+  margin-top: 1.2rem;
+`;

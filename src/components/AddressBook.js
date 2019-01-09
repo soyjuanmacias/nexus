@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Layout from './Layout';
 import ContactList from './ContactList';
+import Layout from './Layout';
+import StatusBar from './StatusBar';
 
 import Contacts from '../services/contacts';
 
@@ -31,6 +32,7 @@ class AddressBook extends Layout {
 
     return (
       <main className={className}>
+        <StatusBar />
         <ContactList items={contacts} />
         {element}
       </main>
