@@ -2,20 +2,34 @@ import axios from 'axios';
 
 import storage from '../providers/storage';
 
+function sleep(seconds = 2) {
+  return new Promise(ok => {
+    setTimeout(ok, Math.random() * seconds * 1000);
+  });
+}
+
 const service = {
   memory: storage.get('contacts'),
 
-  create(data = {}) {
+  async create(data = {}) {
     if (!data.id) {
       throw new Error('An `id` must be provided');
     }
 
     this.memory[data.id] = data;
     storage.set('contacts', this.memory);
+
+    await sleep();
+
+    return this.memory[data.id];
   },
 
-  delete(id) {
+  async delete(id) {
     delete this.memory[id];
+
+    await sleep();
+
+    return null;
   },
 
   async fetch() {
@@ -50,6 +64,8 @@ const service = {
 
     const temporary = Object.values(this.memory);
 
+    await sleep();
+
     if (id) {
       return temporary.find(item => id === item.id);
     }
@@ -57,11 +73,15 @@ const service = {
     return temporary;
   },
 
-  update(id, data) {
+  async update(id, data) {
     if (this.memory[id]) {
       this.memory[id] = data;
       storage.set('contacts', this.memory);
     }
+
+    await sleep();
+
+    return this.memory[id];
   },
 };
 
