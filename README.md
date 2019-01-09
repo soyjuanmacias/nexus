@@ -130,5 +130,5 @@ whatever you want.
 
 ### Refactor
 
-If you think any can be improved, please change it. We really like the
+If you think anything can be improved, please change it. We really like the
 philosohpy of boy scouts: "Leave things better than you found".
