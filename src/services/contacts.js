@@ -27,7 +27,9 @@ const service = {
     });
 
     this.memory = results.reduce((acc, item) => {
-      const id = `${item.id.name}${item.id.value}`;
+      const id = `${item.id.name}${item.id.value}`
+        .replace(/\s/g, '')
+        .replace(/undefined/g, '');
 
       if (id === 'null') {
         return acc;

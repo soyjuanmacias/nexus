@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Avatar from '../Avatar';
+import Link from '../Link';
 
 const Container = styled('div')``;
 const Name = styled('span')``;
@@ -11,17 +12,20 @@ const Phone = styled('span')``;
 
 const Contact = ({
   className,
+  id,
   name: { first, last },
   phone,
   picture: { thumbnail },
 }) => (
-  <article className={className}>
-    <Avatar image={thumbnail} name={`${first} ${last}`} />
-    <Container>
-      <Name>{`${first} ${last}`}</Name>
-      <Phone>{phone}</Phone>
-    </Container>
-  </article>
+  <Link to={id}>
+    <article className={className}>
+      <Avatar image={thumbnail} name={`${first} ${last}`} />
+      <Container>
+        <Name>{`${first} ${last}`}</Name>
+        <Phone>{phone}</Phone>
+      </Container>
+    </article>
+  </Link>
 );
 
 Contact.defaultProps = {
@@ -32,6 +36,7 @@ Contact.defaultProps = {
 
 Contact.propTypes = {
   className: PropTypes.string,
+  id: PropTypes.string.isRequired,
   name: PropTypes.shape({
     first: PropTypes.string,
     last: PropTypes.string,
@@ -44,8 +49,7 @@ Contact.propTypes = {
 };
 
 export default styled(Contact)`
-  border-bottom: 0.2rem solid
-    ${props => rgba(props.theme['--color-dark-night'], 0.1)};
+  border-bottom: 0.1rem solid ${props => rgba(props.theme['--color-dark'], 0.1)};
   display: flex;
   margin: 0 1.2rem 0 2.4rem;
   padding: 0.8rem 0;

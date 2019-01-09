@@ -8,10 +8,10 @@ import Icon from './Icon';
 const StatusBar = ({ className }) => (
   <header className={className}>
     <Icon>signal_cellular_alt</Icon>
-      movistar
+    movistar
     <Icon>battery_full</Icon>
   </header>
-  );
+);
 
 StatusBar.defaultProps = {
   className: '',
@@ -22,7 +22,7 @@ StatusBar.propTypes = {
 };
 
 export default styled(StatusBar)`
-  background-color: ${props => rgba(props.theme['--color-dark-night'], 0.9)};
+  background-color: ${props => rgba(props.theme['--color-primary'], 0.9)};
   color: ${props => props.theme['--color-light']};
   height: 2.5rem;
   padding: 0 0.4rem;

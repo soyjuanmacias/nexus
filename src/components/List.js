@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+export const Item = styled('li')``;
+
 export const List = ({
   className,
   emptyTemplate: Empty,
@@ -11,14 +13,14 @@ export const List = ({
 }) => (
   <ul className={className}>
     {items.map((item, index) => (
-      <li key={JSON.stringify(item)}>
+      <Item key={JSON.stringify(item)}>
         <Template
           {...options}
           index={index}
           item={item}
           {...typeof item === 'object' && item}
         />
-      </li>
+      </Item>
     ))}
     {items.length === 0 && <Empty {...options} />}
   </ul>
