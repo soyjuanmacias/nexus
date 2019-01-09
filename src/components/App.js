@@ -6,8 +6,8 @@ import AddressBook from './AddressBook';
 import Router from './Router';
 import Theme from './Theme';
 
-const Detail = () => {};
-const Empty = () => 'hello';
+const Detail = () => null;
+const Empty = () => null;
 
 const App = () => (
   <Router>
