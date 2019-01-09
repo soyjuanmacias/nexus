@@ -1,4 +1,5 @@
 import React from 'react';
+import { rgba } from 'polished';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -43,19 +44,32 @@ Contact.propTypes = {
 };
 
 export default styled(Contact)`
+  border-bottom: 0.2rem solid
+    ${props => rgba(props.theme['--color-dark-night'], 0.1)};
   display: flex;
+  margin: 0 1.2rem 0 2.4rem;
+  padding: 0.8rem 0;
+
+  ${Avatar} {
+    height: 6rem;
+    width: 6rem;
+  }
 
   ${Container} {
+    margin-left: 1.2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
   ${Name} {
-    font-weight: ${props => props.theme['--font-weight-medium']};
+    ${props => props.theme['--font-large']};
+    font-weight: ${props => props.theme['--font-weight-demi']};
   }
 
   ${Phone} {
     ${props => props.theme['--font-small']};
-    color: ${props => props.theme['--font-opacity-60']};
+    color: ${props => props.theme['--font-opacity-40']};
+    font-weight: ${props => props.theme['--font-weight-demi']};
   }
 `;

@@ -31,6 +31,8 @@ export default styled(Avatar)`
   width: 4rem;
 
   ${Image} {
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
   }
 `;
