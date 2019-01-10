@@ -1,13 +1,13 @@
 # Nexus (code challenge)
 
-Our objetive is to create an address book.
+Your objetive is to create an address book.
 
 ![Example](https://user-images.githubusercontent.com/1523379/50910291-ca33ff80-142d-11e9-8b17-97c9faf993cf.png)
-<small>This is an example of the objective</small>
+<small>This is an example of the end result</small>
 
 ## Prologue
 
-In this exercise, app is based on: React + styled-components + React-Router.
+In this exercise the app is based on: React + styled-components + React-Router.
 If you are not familiar with them you can check the documentation in the
 following links:
 
@@ -16,19 +16,19 @@ following links:
 - React-Router https://reacttraining.com/react-router/web/guides/quick-start
 
 Around these libraries, we've created a few components and basic structure for
-the project. Here we have some highlights of the structure of the project.
+the project. These are some of its highlights:
 
 - `/components` Contains basic components we are using in the project. Here are
   some files you do not need to worry about: `Theme`, `AddressBook`, `Layout`
   and `Router`.
 
-  There is a component called `Icon`, this component use Material Icons to
-  display different symbols. You can find the complete list of icons in:
+  There is a component called `Icon`, it uses Material Icons to display
+  different symbols. You can find the complete list of icons in:
   https://material.io/tools/icons/
 
 - `/services` Contains the only service we are going to use along the app. You
   do not need to understand the code, it exposes a basic api (`create`,
-  `delete`, `read`, `update`) that allow you to handle contacts of the address
+  `delete`, `read`, `update`) that allows you to handle contacts of the address
   book.
 
   <small>Tip: This service includes a random delay in each call</small>
@@ -38,23 +38,23 @@ the project. Here we have some highlights of the structure of the project.
 
 ## Run
 
-First at all, clone the repo using the button at the top. Or if you prefer, you
+First, clone the repo using the button at the top. Or if you prefer, you
 can fork the project.
 
 <img width="318" alt="screen shot 2019-01-09 at 5 49 43 pm" src="https://user-images.githubusercontent.com/1523379/50914522-028c0b80-1437-11e9-82fc-5689f5f11039.png">
 
-Then, you need to install all the packages `npm install`. If you want to
-start, you can run the application with `npm start`. You can pass the tests by
-typing `npm test`.
+Then, you need to install all the packages by running `npm install`. If you want
+to start, you can run the application with `npm start`. You can pass the tests
+by typing `npm test`.
 
 ## Exercise
 
 ### Detail view
 
-After run the application, you can see a list of contacts. If you click in any
-of them, you'll see a new screen pending of content. You need to create this
+After starting the application, you can see a list of contacts. If you click in
+any of them, you'll see a new screen pending of content. You need to create this
 screen in order to complete this first step of the test. At least, you'll need
-to display 4 elements of the contact.
+to display 4 elements of each contact.
 
 You can find the component is used for this screen under folder
 `/components/ContactDetail`.
@@ -120,8 +120,8 @@ under `/services/contacts.js`.
 
 #### Optional
 
-- Headers for any letter. (This includes sort of the contacts).
-- Letters index (Right side)
+- Headers for any letter. (This includes sorting of the contacts).
+- Index by letter (Right side)
 
 ### Add or edit contact (optional)
 
@@ -130,5 +130,5 @@ whatever you want.
 
 ### Refactor
 
-If you think anything can be improved, please change it. We really like the
-philosohpy of boy scouts: "Leave things better than you found".
+If you think anything can be improved, please change it. e really like the boy
+scouts' philosophy: "Leave things better than you found".
