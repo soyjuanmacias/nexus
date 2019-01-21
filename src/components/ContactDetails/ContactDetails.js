@@ -92,7 +92,6 @@ class ContactDetails extends Component {
   render() {
     const { className } = this.props;
     const { data } = this.state;
-    console.log(data);
     return (
       <article className={className}>
         <Header>
