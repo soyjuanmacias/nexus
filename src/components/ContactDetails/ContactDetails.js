@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { rgba } from 'polished';
+import { rgba, parseToHsl } from 'polished';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+
+import contactService from '../../services/contacts';
 
 import Icon from '../Icon';
 import Link from '../Link';
@@ -19,24 +21,87 @@ class ContactDetails extends Component {
   };
 
   state = {
-    data: { name: '[name]' },
+    data: {},
+    loading: true,
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    this._getContact(this.props.match.params.id);
+  }
+
+  async shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.match.params.id !== nextProps.match.params.id) {
+      await this._getContact(nextProps.match.params.id);
+      return true;
+    }
+    return false;
+  }
+
+  async _getContact(id) {
+    this.setState({ loading: true });
+    let contact = {};
+    await contactService.read(id).then(res => (contact = res));
+    this.setState({
+      data: contact,
+      loading: false,
+    });
+  }
+
+  _shouldRenderContactName(data) {
+    if (!this.state.loading) {
+      return this._renderContactName(data);
+    }
+    return 'Loading...';
+  }
+
+  _renderContactName(data) {
+    return (
+      <div>
+        {this._capitalizeFirstLetter(data.name.first)}
+        {' '}
+        {this._capitalizeFirstLetter(data.name.last)}
+      </div>
+    );
+  }
+
+  _shouldRenderContactInfo(data) {
+    if (!this.state.loading) {
+      return this._renderContactInfo(data);
+    }
+    return 'Loading...';
+  }
+
+  _renderContactInfo(data) {
+    return (
+      <div>
+        <div>{data.cell}</div>
+        Mobile
+        <div>{data.phone}</div>
+        Work
+        <div>{data.email}</div>
+        Email
+        <div>Rest of data...</div>
+      </div>
+    );
+  }
+
+  _capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 
   render() {
     const { className } = this.props;
     const { data } = this.state;
-
+    console.log(data);
     return (
       <article className={className}>
         <Header>
           <Link to="/">
             <Icon>arrow_back_ios</Icon>
           </Link>
-          {data.name}
+          {this._shouldRenderContactName(data)}
         </Header>
-        <Container>You need to implement the view here</Container>
+        <Container>{this._shouldRenderContactInfo(data)}</Container>
       </article>
     );
   }
